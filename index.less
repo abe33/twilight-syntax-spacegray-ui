@@ -1,5 +1,9 @@
+// Colors
+
+@import "stylesheets/syntax-variables.less";
+
 .editor .wrap-guide {
-  background-color: #ffffff;
+  background-color: @base07;
   opacity: 0.05;
 }
 
@@ -8,12 +12,12 @@
 }
 
 .editor, .editor .gutter {
-  background-color: #2B303B;
-  color: #F8F8F8;
+  background-color: @base00;
+  color: @base05;
 }
 
 .editor.is-focused .cursor {
-  border-color: #A7A7A7;
+  border-color: @base04;
 }
 
 .editor.is-focused .selection .region {
@@ -26,35 +30,38 @@
 
 .comment {
   font-style: italic;
-  color: #5F5A60;
+  color: lighten(#5F5A60, 10%);
 }
 
 .constant {
-  color: #CF6A4C;
+  color: @orange;
 }
 
 .entity {
-  color: #9B703F;
+  color: @blue;
 }
 
 .keyword {
-  color: #CDA869;
+  color: @yellow;
 }
 
 .storage {
-  color: #F9EE98;
+  color: @yellow;
 }
 
 .string {
-  color: #8F9D6A;
+  color: @green;
+}
+.string.regexp {
+  color: @magenta;
 }
 
 .support {
-  color: #9B859D;
+  color: @orange-light;
 }
 
 .variable {
-  color: #7587A6;
+  color: @blue;
 }
 
 .invalid.deprecated {
@@ -77,8 +84,7 @@
 }
 
 .entity.other.inherited-class {
-  font-style: italic;
-  color: #9B5C2E;
+  color: @blue;
 }
 
 .string .source {
@@ -89,20 +95,28 @@
   color: #DDF2A4;
 }
 
-.string.regexp {
-  color: #E9C062;
-}
-
 .string.regexp .constant.character.escape, .string.regexp .source.ruby.embedded, .string.regexp .string.regexp.arbitrary-repitition {
   color: #CF7D34;
 }
 
 .string .variable {
-  color: #8A9A95;
+  color: @base05;
 }
 
 .support.function {
-  color: #DAD085;
+  color: @orange;
+}
+
+.punctuation.embedded, .punctuation.section.embedded, .source.ruby .meta.embedded .punctuation.section.embedded, .source.ruby .meta.embedded .punctuation.section.embedded .source.ruby {
+  color: @orange;
+}
+
+.punctuation.definition.string.begin, .punctuation.definition.string.end {
+  color: @orange;
+}
+
+.meta.brace {
+  color: @red-light;
 }
 
 .support.constant {
@@ -126,7 +140,7 @@
 }
 
 .declaration.tag.inline, .declaration.tag.inline .entity, .source .entity.name.tag, .source .entity.other.attribute-name, .meta.tag.inline, .meta.tag.inline .entity {
-  color: #E0C589;
+  color: @green-light;
 }
 
 .meta.selector.css .entity.name.tag {
@@ -146,7 +160,7 @@
 }
 
 .support.type.property-name.css {
-  color: #C5AF75;
+  color: @cyan-light;
 }
 
 .meta.property-group .support.constant.property-value.css, .meta.property-value .support.constant.property-value.css {
@@ -154,11 +168,11 @@
 }
 
 .meta.preprocessor.at-rule .keyword.control.at-rule {
-  color: #8693A5;
+  color: @blue;
 }
 
 .meta.property-value .support.constant.named-color.css, .meta.property-value .constant {
-  color: #CA7840;
+  color: @orange-light;
 }
 
 .meta.constructor.argument.css {
